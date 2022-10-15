@@ -1,0 +1,47 @@
+#include <stdio.h>
+int decrements(int iV1, int iV2, int iV3, int iV4)
+{
+	int iValue;
+	
+	iValue = iV1-iV2;
+	
+	if (iV3==iV2-iValue&&iV4==iV3-iValue)
+		return iValue;
+	else
+		return 0;
+}
+
+int main ()
+{
+	int iV1;
+	int iV2;
+	int iV3;
+	int iV4;
+	int iV5;
+	int dncV;
+	
+	printf("Please input the first value in the sequence: ");
+	scanf("%d", &iV1);
+	printf("Please input the second value in the sequence: ");
+	scanf("%d", &iV2);
+	printf("Please input the third value in the sequence: ");
+	scanf("%d", &iV3);
+	printf("Please input the fourth value in the sequence: ");
+	scanf("%d", &iV4);
+	
+	decrements(iV1, iV2, iV3, iV4);
+	dncV = decrements(iV1, iV2, iV3, iV4);
+	
+	iV5 = iV4-dncV;
+	
+	if (decrements!=0&&iV5<iV4)
+	{
+		printf("The given are:  %d\t%d\t%d\t%d\n", iV1, iV2, iV3, iV4);
+		printf("The logical next value in the sequence is: %d\t", iV5);
+		printf("Reason/s:\tdecrements of %d ", dncV);
+	}
+	else
+		printf("Does not decrement lmao");
+	
+	
+}
